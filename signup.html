@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduForge | Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-body signup-body">
+    <main class="stacked-layout">
+      <section class="hero-banner">
+        <nav class="top-nav banner-nav">
+          <a class="logo" href="index.html">EduForge</a>
+          <a class="ghost-link" href="index.html">Back to login</a>
+        </nav>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Launch your profile</p>
+          <h1>Your next teammate may be one project away.</h1>
+          <p class="lead">
+            Create a student profile, add your interests, and start getting
+            project and collaborator recommendations instantly.
+          </p>
+        </div>
+      </section>
+
+      <section class="signup-grid">
+        <form class="signup-card" data-demo-signup>
+          <div class="section-copy compact">
+            <h2>Create an account</h2>
+            <p>Set up your profile to explore projects and collaboration circles.</p>
+          </div>
+
+          <div class="two-col">
+            <label>
+              Full name
+              <input type="text" name="fullName" placeholder="Aarav Sharma" required />
+            </label>
+            <label>
+              College / School
+              <input type="text" name="college" placeholder="National Institute of Tech" required />
+            </label>
+          </div>
+
+          <div class="two-col">
+            <label>
+              Email
+              <input type="email" name="signupEmail" placeholder="student@campus.edu" required />
+            </label>
+            <label>
+              Year / Role
+              <input type="text" name="yearRole" placeholder="3rd Year, CSE" required />
+            </label>
+          </div>
+
+          <div class="two-col">
+            <label>
+              Create password
+              <input
+                type="password"
+                name="password"
+                placeholder="Create a strong password"
+                minlength="8"
+                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{8,}"
+                title="Password must be at least 8 characters and include uppercase, lowercase, number, and special character."
+                required
+              />
+            </label>
+            <label>
+              Confirm password
+              <input
+                type="password"
+                name="confirmPassword"
+                placeholder="Re-enter your password"
+                required
+              />
+            </label>
+          </div>
+
+          <p class="muted-text">
+            Password must be at least 8 characters and include uppercase, lowercase,
+            a number, and a special character.
+          </p>
+
+          <label>
+            Interest tags
+            <input
+              type="text"
+              name="interestTags"
+              placeholder="AI, Web Development, IoT, Sustainability"
+              required
+            />
+          </label>
+
+          <label>
+            What do you want to build?
+            <textarea
+              name="buildGoal"
+              rows="4"
+              placeholder="I want to build hackathon-ready tools, join product teams, and explore applied AI projects."
+            ></textarea>
+          </label>
+
+          <button type="submit" class="primary-btn">Create my profile</button>
+        </form>
+
+        <aside class="insight-card">
+          <span class="card-tag">What you unlock</span>
+          <div class="insight-list">
+            <article>
+              <h3>Project Graph</h3>
+              <p>Visual discovery of trending student projects by keywords, domain, and campus interest clusters.</p>
+            </article>
+            <article>
+              <h3>Team Match</h3>
+              <p>Connect with students who share similar skills, availability, and hackathon interests.</p>
+            </article>
+            <article>
+              <h3>Source Trails</h3>
+              <p>Jump from a project idea to relevant datasets, repos, APIs, and implementation inspiration.</p>
+            </article>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

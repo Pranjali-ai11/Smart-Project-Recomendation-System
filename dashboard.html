@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduForge | Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="app-body">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="logo" href="dashboard.html">EduForge</a>
+        <div class="sidebar-group">
+          <a class="nav-link active" href="dashboard.html">Dashboard</a>
+          <a class="nav-link" href="recommendations.html">Recommendation Engine</a>
+          <a class="nav-link" href="profile.html">Profile Setup</a>
+          <a class="nav-link" href="submit-project.html">Submit Project</a>
+          <a class="nav-link" href="feed.html">Project Feed</a>
+          <a class="nav-link" href="teammates.html">Teammates</a>
+          <a class="nav-link" href="index.html" data-logout-link>Log out</a>
+        </div>
+
+        <div class="sidebar-card">
+          <span class="card-tag">Today</span>
+          <h3>3 collaboration invites</h3>
+          <p>Two hackathon teams and one AI research circle are waiting for your response.</p>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="dashboard-header">
+          <div>
+            <p class="eyebrow">Your student innovation hub</p>
+            <h1>Dashboard</h1>
+          </div>
+          <a class="primary-btn small-btn" href="recommendations.html">Explore recommendations</a>
+        </header>
+
+        <section class="spotlight-panel">
+          <div class="spotlight-copy">
+            <span class="card-tag">Innovation Pulse</span>
+            <h2>Recommended direction: Campus Sustainability Intelligence</h2>
+            <p>
+              Based on your interest in AI, web apps, and social impact, this
+              theme has strong project relevance and active collaborators.
+            </p>
+          </div>
+          <div class="spotlight-stats">
+            <article>
+              <strong>24</strong>
+              <span>related projects</span>
+            </article>
+            <article>
+              <strong>11</strong>
+              <span>students matching your interests</span>
+            </article>
+            <article>
+              <strong>6</strong>
+              <span>hackathons this month</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <h2>Trending Projects</h2>
+              <span class="muted-badge">Live across campuses</span>
+            </div>
+            <div class="project-list">
+              <a class="project-card project-card-link" href="view-idea.html">
+                <div>
+                  <h3>Smart Waste Segregation Assistant</h3>
+                  <p>Computer vision workflow for sustainable campuses and cleaner hostels.</p>
+                </div>
+                <span>AI + IoT</span>
+              </a>
+              <a class="project-card project-card-link" href="view-idea.html">
+                <div>
+                  <h3>Peer Study Matchmaker</h3>
+                  <p>Interest-based matching for study groups, project teams, and mentorship circles.</p>
+                </div>
+                <span>EdTech</span>
+              </a>
+              <a class="project-card project-card-link" href="view-idea.html">
+                <div>
+                  <h3>Local Language Career Bot</h3>
+                  <p>Career guidance assistant for students in regional languages with internship suggestions.</p>
+                </div>
+                <span>NLP</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h2>Suggested Collaborators</h2>
+              <span class="muted-badge">Skill-compatible</span>
+            </div>
+            <div class="collab-list">
+              <article class="collab-card">
+                <h3>Naina Patel</h3>
+                <p>Frontend + storytelling design. Interested in hackathons and civic tech.</p>
+                <button class="secondary-btn" type="button" data-dashboard-connect="Naina Patel">Connect</button>
+              </article>
+              <article class="collab-card">
+                <h3>Rohit Menon</h3>
+                <p>ML engineer focused on recommendation systems and project ranking models.</p>
+                <button class="secondary-btn" type="button" data-dashboard-connect="Rohit Menon">Connect</button>
+              </article>
+              <article class="collab-card">
+                <h3>Zoya Khan</h3>
+                <p>Strong in product strategy, pitch decks, and startup-oriented education tools.</p>
+                <button class="secondary-btn" type="button" data-dashboard-connect="Zoya Khan">Connect</button>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

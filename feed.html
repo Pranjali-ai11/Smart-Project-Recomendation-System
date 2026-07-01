@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduForge | Project Feed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="app-body">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="logo" href="dashboard.html">EduForge</a>
+        <div class="sidebar-group">
+          <a class="nav-link" href="dashboard.html">Dashboard</a>
+          <a class="nav-link" href="recommendations.html">Recommendation Engine</a>
+          <a class="nav-link" href="profile.html">Profile Setup</a>
+          <a class="nav-link" href="submit-project.html">Submit Project</a>
+          <a class="nav-link active" href="feed.html">Project Feed</a>
+          <a class="nav-link" href="teammates.html">Teammates</a>
+          <a class="nav-link" href="index.html" data-logout-link>Log out</a>
+        </div>
+
+        <div class="sidebar-card">
+          <span class="card-tag">Community pulse</span>
+          <h3>Weekly innovation board</h3>
+          <p>Discover what students are building, what people love, and which ideas are gaining momentum.</p>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="dashboard-header">
+          <div>
+            <p class="eyebrow">Student community showcase</p>
+            <h1>Project Feed</h1>
+          </div>
+          <a class="primary-btn small-btn" href="submit-project.html">Share your project</a>
+        </header>
+
+        <section class="feed-shell">
+          <div class="panel feed-toolbar">
+            <div class="search-box">
+              <input id="feedSearch" type="text" placeholder="Search projects, domains, creators, or tags..." />
+              <button class="primary-btn" id="feedSearchButton">Find</button>
+            </div>
+            <div class="tag-row">
+              <button class="tag-pill active" data-feed-filter="All">All</button>
+              <button class="tag-pill" data-feed-filter="AI">AI</button>
+              <button class="tag-pill" data-feed-filter="Education">Education</button>
+              <button class="tag-pill" data-feed-filter="Healthcare">Healthcare</button>
+              <button class="tag-pill" data-feed-filter="Hackathon">Hackathon</button>
+            </div>
+          </div>
+
+          <div class="feed-grid">
+            <section class="panel">
+              <div class="panel-header">
+                <h2>Featured This Week</h2>
+                <span class="muted-badge">Most innovative</span>
+              </div>
+              <div class="featured-column">
+                <article class="featured-feed-card">
+                  <div class="result-meta">
+                    <span>Loading</span>
+                    <span>Dynamic metrics</span>
+                  </div>
+                  <h3>Trending project</h3>
+                  <p>Community project details load here from the backend.</p>
+                  <div class="preview-footer">
+                    <span>Views loading</span>
+                    <span>Likes loading</span>
+                  </div>
+                  <a class="secondary-btn view-idea-btn" href="view-idea.html">View idea</a>
+                </article>
+                <article class="featured-feed-card alt-card">
+                  <div class="result-meta">
+                    <span>Loading</span>
+                    <span>Dynamic metrics</span>
+                  </div>
+                  <h3>Trending project</h3>
+                  <p>Community project details load here from the backend.</p>
+                  <div class="preview-footer">
+                    <span>Views loading</span>
+                    <span>Likes loading</span>
+                  </div>
+                  <a class="secondary-btn view-idea-btn" href="view-idea.html">View idea</a>
+                </article>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <h2>Community Projects</h2>
+                <span class="muted-badge">Community board</span>
+              </div>
+              <div class="community-feed" id="feedResults"></div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

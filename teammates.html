@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduForge | Teammates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="app-body">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="logo" href="dashboard.html">EduForge</a>
+      <div class="sidebar-group">
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+        <a class="nav-link" href="recommendations.html">Recommendation Engine</a>
+        <a class="nav-link" href="profile.html">Profile Setup</a>
+        <a class="nav-link" href="submit-project.html">Submit Project</a>
+        <a class="nav-link" href="feed.html">Project Feed</a>
+        <a class="nav-link active" href="teammates.html">Teammates</a>
+        <a class="nav-link" href="index.html" data-logout-link>Log out</a>
+      </div>
+
+      <div class="sidebar-card">
+        <span class="card-tag">Collaboration hub</span>
+        <h3>Find your next teammate</h3>
+        <p>Search by skills, interests, or goals to discover students whose profile matches your project idea.</p>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="dashboard-header">
+        <div>
+          <p class="eyebrow">Search student collaborators</p>
+          <h1>Teammates</h1>
+        </div>
+        <a class="primary-btn small-btn" href="profile.html">Update your profile</a>
+      </header>
+
+      <section class="teammates-shell">
+        <div class="panel teammates-toolbar">
+          <div class="search-box">
+            <input id="teammateSearch" type="text" placeholder="Search by name, skill, interest, role, or college..." />
+            <button class="primary-btn" id="teammateSearchButton">Search</button>
+          </div>
+          <div class="tag-row">
+            <button class="tag-pill active" data-teammate-filter="All">All</button>
+            <button class="tag-pill" data-teammate-filter="AI">AI</button>
+            <button class="tag-pill" data-teammate-filter="Web Development">Web Development</button>
+            <button class="tag-pill" data-teammate-filter="Hackathon">Hackathon</button>
+            <button class="tag-pill" data-teammate-filter="Healthcare">Healthcare</button>
+          </div>
+        </div>
+
+        <div class="teammates-grid">
+          <section class="panel">
+            <div class="panel-header">
+              <h2 id="teammateResultsTitle">People to connect with</h2>
+              <span class="muted-badge" id="teammateResultsBadge">Search results</span>
+            </div>
+
+            <div class="teammate-results" id="teammateResults">
+            </div>
+          </section>
+
+          <section class="panel" id="projectTeamSection" hidden>
+            <div class="panel-header">
+              <h2>Project Team Members</h2>
+              <span class="muted-badge" id="projectTeamBadge">Current team</span>
+            </div>
+
+            <div id="projectTeamPanel" class="insight-list compact-insights">
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <h2>Pending Connection Requests</h2>
+              <span class="muted-badge">Incoming</span>
+            </div>
+
+            <div id="pendingRequests">
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+
+              <h2>My Connections</h2>
+
+              <span class="muted-badge">
+                Accepted
+              </span>
+
+            </div>
+
+            <div id="connectionsList">
+            </div>
+
+            <p class="muted-text team-connections-note">
+              Connections are your broader network. Team members are the people already assigned to a specific project.
+            </p>
+          </section>
+
+          <aside class="panel teammate-profile-panel">
+            <div class="panel-header">
+              <h2>Profile view</h2>
+              <span class="muted-badge">
+                Recommended teammate
+              </span>
+            </div>
+
+            <div id="teammateProfile"></div>
+          </aside>
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduForge | Recommendation Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="app-body">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="logo" href="dashboard.html">EduForge</a>
+        <div class="sidebar-group">
+          <a class="nav-link" href="dashboard.html">Dashboard</a>
+          <a class="nav-link active" href="recommendations.html">Recommendation Engine</a>
+          <a class="nav-link" href="profile.html">Profile Setup</a>
+          <a class="nav-link" href="submit-project.html">Submit Project</a>
+          <a class="nav-link" href="feed.html">Project Feed</a>
+          <a class="nav-link" href="teammates.html">Teammates</a>
+          <a class="nav-link" href="index.html" data-logout-link>Log out</a>
+        </div>
+
+        <div class="sidebar-card">
+          <span class="card-tag">Smart matching</span>
+          <h3>Search by keyword</h3>
+          <p>Use domain keywords to reveal relevant project ideas, sources, and student teammates.</p>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="dashboard-header">
+          <div>
+            <p class="eyebrow">Interactive search surface</p>
+            <h1>Recommendation Engine</h1>
+          </div>
+        </header>
+
+        <section class="engine-layout">
+          <div class="panel search-panel">
+            <div class="panel-header">
+              <h2>Project Discovery</h2>
+              <span class="muted-badge">Demo experience</span>
+            </div>
+
+            <div class="search-box">
+              <input
+                id="searchInput"
+                type="text"
+                placeholder="Search keywords like AI, healthcare, hackathon, sustainability..."
+              />
+              <button class="primary-btn" id="runSearch">Search</button>
+            </div>
+
+            <div class="tag-row">
+              <button class="tag-pill active" data-keyword="All">All</button>
+              <button class="tag-pill" data-keyword="AI">AI</button>
+              <button class="tag-pill" data-keyword="EdTech">EdTech</button>
+              <button class="tag-pill" data-keyword="Hackathon">Hackathon</button>
+              <button class="tag-pill" data-keyword="Sustainability">Sustainability</button>
+              <button class="tag-pill" data-keyword="Healthcare">Healthcare</button>
+            </div>
+
+            <div id="resultsGrid" class="results-grid"></div>
+          </div>
+
+          <div class="panel intelligence-panel">
+            <div class="panel-header">
+              <h2>Why these results?</h2>
+              <span class="muted-badge">Signal summary</span>
+            </div>
+
+            <div class="insight-list engine-insights" id="explanationBox">
+              <article>
+                <h3>Keyword relevance</h3>
+                <p>Projects are ranked by title, domain, and skill-tag match against your search.</p>
+              </article>
+              <article>
+                <h3>Source suggestions</h3>
+                <p>Each card surfaces useful starting points like APIs, datasets, mentors, or implementation references.</p>
+              </article>
+              <article>
+                <h3>Collaboration fit</h3>
+                <p>Students with similar goals appear next to project ideas that could benefit from team-based execution.</p>
+              </article>
+            </div>
+
+            <div class="panel-header recommendation-collab-header">
+              <h2>Like-minded collaborators</h2>
+              <span class="muted-badge">Request collaboration</span>
+            </div>
+
+            <div id="collaboratorResults" class="results-grid"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js?v=20260421-3"></script>
+  </body>
+</html>

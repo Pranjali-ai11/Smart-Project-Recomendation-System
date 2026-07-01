@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduForge | Submit Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="app-body">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="logo" href="dashboard.html">EduForge</a>
+      <div class="sidebar-group">
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+        <a class="nav-link" href="recommendations.html">Recommendation Engine</a>
+        <a class="nav-link" href="profile.html">Profile Setup</a>
+        <a class="nav-link active" href="submit-project.html">Submit Project</a>
+        <a class="nav-link" href="feed.html">Project Feed</a>
+        <a class="nav-link" href="teammates.html">Teammates</a>
+        <a class="nav-link" href="index.html" data-logout-link>Log out</a>
+      </div>
+
+      <div class="sidebar-card">
+        <span class="card-tag">Submission tip</span>
+        <h3>Show what makes it different</h3>
+        <p>Projects with clear problem statements, source links, and outcomes feel more innovative and easier to
+          recommend.</p>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="dashboard-header">
+        <div>
+          <p class="eyebrow">Publish your work</p>
+          <h1>Project Submission</h1>
+        </div>
+        <button class="primary-btn small-btn" type="button" data-publish-trigger>Publish project</button>
+      </header>
+
+      <section class="profile-layout">
+        <form class="panel project-form" data-project-form>
+          <div class="panel-header">
+            <h2>Project Details</h2>
+            <span class="muted-badge">Community-ready</span>
+          </div>
+
+          <label>
+            Project title *
+            <input type="text" id="projectTitle" placeholder="EduPath AI Recommender" required />
+          </label>
+
+          <div class="form-group">
+
+            <label for="team_size">
+              Team Size (2 to 5 members)
+            </label>
+
+            <input type="number" id="team_size" name="team_size" min="2" max="5" value="2" required>
+
+          </div>
+
+          <label>
+            Description *
+            <textarea id="projectDescription" rows="5"
+              placeholder="An education-focused platform that recommends student project ideas, matches collaborators, and showcases innovative campus projects."
+              required></textarea>
+          </label>
+
+          <div class="two-col">
+            <label>
+              Domain *
+              <select id="projectDomain" required>
+                <option value="" selected disabled>Select a domain</option>
+                <option>AI</option>
+                <option>Education</option>
+                <option>Healthcare</option>
+                <option>Web Development</option>
+                <option>Hackathon Tooling</option>
+              </select>
+            </label>
+            <label>
+              Status *
+              <select id="projectStatus" required>
+                <option value="" selected disabled>Select project status</option>
+                <option>Idea</option>
+                <option>In Progress</option>
+                <option>Completed</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            Tech stack *
+            <div class="chip-input" data-chip-input data-chip-label="Tech stack" data-required="true">
+              <p class="chip-helper">Suggested technologies</p>
+              <div class="chip-suggestions" data-chip-suggestions>
+                <span class="chip chip-option" data-chip-option>HTML</span>
+                <span class="chip chip-option" data-chip-option>CSS</span>
+                <span class="chip chip-option" data-chip-option>JavaScript</span>
+                <span class="chip chip-option" data-chip-option>React</span>
+                <span class="chip chip-option" data-chip-option>Node.js</span>
+              </div>
+              <div class="chip-controls">
+                <input type="text" data-chip-text placeholder="Add a technology" />
+                <button class="secondary-btn" type="button" data-chip-add>Add</button>
+              </div>
+              <p class="chip-helper">Your selected technologies</p>
+              <div class="chip-list" data-chip-list></div>
+            </div>
+          </label>
+
+          <label>
+            Project tags *
+            <div class="chip-input" data-chip-input data-chip-label="Project tags" data-required="true">
+              <p class="chip-helper">Suggested project tags</p>
+              <div class="chip-suggestions" data-chip-suggestions>
+                <span class="chip chip-option" data-chip-option>student-network</span>
+                <span class="chip chip-option" data-chip-option>recommendation-engine</span>
+                <span class="chip chip-option" data-chip-option>hackathon</span>
+                <span class="chip chip-option" data-chip-option>ai-project</span>
+                <span class="chip chip-option" data-chip-option>web-app</span>
+              </div>
+              <div class="chip-controls">
+                <input type="text" data-chip-text placeholder="Add a project tag" />
+                <button class="secondary-btn" type="button" data-chip-add>Add</button>
+              </div>
+              <p class="chip-helper">Your selected tags</p>
+              <div class="chip-list" data-chip-list></div>
+            </div>
+          </label>
+
+          <div class="two-col">
+            <label>
+              GitHub link *
+              <input type="url" id="projectGithub" data-invalid-link placeholder="https://github.com/username/project"
+                pattern="https?://(www\.)?github\.com/[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})/[A-Za-z0-9_.-]+/?"
+                title="Enter a valid GitHub project link, for example: https://github.com/username/project" required />
+            </label>
+            <label>
+              Demo link *
+              <input type="url" id="projectDemo" data-invalid-link placeholder="https://your-demo-link.com"
+                pattern="https?://.+" title="Enter a valid demo link, for example: https://your-demo-link.com"
+                required />
+            </label>
+          </div>
+
+          <label>
+            Project objective *
+            <textarea id="projectObjective" rows="3"
+              placeholder="Help students discover, evaluate, and collaborate on domain-specific project ideas."
+              required></textarea>
+          </label>
+
+          <label>
+            Target users *
+            <input type="text" id="projectTargetUsers" placeholder="Students, hackathon teams, campus innovators"
+              required />
+          </label>
+
+          <label>
+            Problem statement *
+            <textarea id="projectProblemStatement" rows="3"
+              placeholder="Students struggle to find innovative project ideas, relevant teammates, and clear insight into the skills they still need."
+              required></textarea>
+          </label>
+
+          <label>
+            Key features *
+            <div class="chip-input" data-chip-input data-chip-label="Key features" data-required="true">
+              <p class="chip-helper">Suggested features</p>
+              <div class="chip-suggestions" data-chip-suggestions>
+                <span class="chip chip-option" data-chip-option>Domain-based recommendations</span>
+                <span class="chip chip-option" data-chip-option>Duplicate detection</span>
+                <span class="chip chip-option" data-chip-option>Weekly trending board</span>
+                <span class="chip chip-option" data-chip-option>Collaboration matching</span>
+                <span class="chip chip-option" data-chip-option>Skill gap insights</span>
+              </div>
+              <div class="chip-controls">
+                <input type="text" data-chip-text placeholder="Add a key feature" />
+                <button class="secondary-btn" type="button" data-chip-add>Add</button>
+              </div>
+              <p class="chip-helper">Your selected features</p>
+              <div class="chip-list" data-chip-list></div>
+            </div>
+          </label>
+        </form>
+
+        <aside class="panel project-preview">
+          <div class="panel-header">
+            <h2>Project Management</h2>
+            <span class="muted-badge">AI-powered review</span>
+          </div>
+
+          <div class="insight-list compact-insights">
+            <article>
+              <h3>AI-generated insights</h3>
+              <p>Ollama is used to analyze innovation score and skill-gap requirements when you save a project.</p>
+            </article>
+            <article>
+              <h3>Duplicate protection</h3>
+              <p>Projects that are too similar to existing submissions are rejected before they are stored.</p>
+            </article>
+            <article>
+              <h3>Team requests</h3>
+              <p>Users can request to join, and the project owner must approve them before they are added.</p>
+            </article>
+          </div>
+
+          <div class="preview-section">
+            <h4>Your submitted projects</h4>
+            <div id="projectManagementPanel" class="insight-list compact-insights">
+              <article>
+                <p class="muted-text">Your projects will appear here once they are saved.</p>
+              </article>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
